@@ -305,7 +305,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 				theGameState = PLAYING;
 
 			//checks if the player has chosen to quit the game
-			if (exitButton.getClicked())
+			if (exitButton.exitGame())
 			{
 				SendMessage(pgmWNDMgr->getWNDHandle(), WM_CLOSE, NULL, NULL);
 			}

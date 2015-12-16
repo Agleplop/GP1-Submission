@@ -180,6 +180,11 @@ void cRocket::reset()
 {
 	//when the game is over it will reset the death variable
 	dead = false;
+	score = 0;
+	for (vector<cBullet*>::iterator bulletIterartor = theRocketBullets.begin(); bulletIterartor != theRocketBullets.end(); ++bulletIterartor)
+	{
+		(*bulletIterartor)->setActive(false);
+	}
 }
 
 
